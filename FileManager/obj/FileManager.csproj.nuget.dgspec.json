@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Программирование\\С#\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj": {}
+    "D:\\Программирование\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj": {}
   },
   "projects": {
-    "D:\\Программирование\\С#\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj": {
+    "D:\\Программирование\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Программирование\\С#\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj",
+        "projectUniqueName": "D:\\Программирование\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj",
         "projectName": "FileManager",
-        "projectPath": "D:\\Программирование\\С#\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj",
+        "projectPath": "D:\\Программирование\\My-Own-File-Manager-MOFM-\\FileManager\\FileManager.csproj",
         "packagesPath": "C:\\Users\\konst\\.nuget\\packages\\",
-        "outputPath": "D:\\Программирование\\С#\\My-Own-File-Manager-MOFM-\\FileManager\\obj\\",
+        "outputPath": "D:\\Программирование\\My-Own-File-Manager-MOFM-\\FileManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,7 +70,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
