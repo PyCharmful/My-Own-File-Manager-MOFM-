@@ -1,22 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "Y6jsWqITNJQ=",
   "success": true,
-=======
-  "dgSpecHash": "6NTergkANxw=",
-  "success": false,
->>>>>>> 005e2b14d0b329d52ee35db10d79b7af53b7be5e
   "projectFilePath": "D:\\Программирование\\My-Own-File-Manager-MOFM-\\GraphicOFM\\GraphicOFM.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Невозможно прочитать сведения о проекте для \"GraphicOFM\": \"v.0.1-alpha_gui\" не является допустимой строкой версии.\r\nИмя параметра: value",
-      "projectPath": "D:\\Программирование\\My-Own-File-Manager-MOFM-\\GraphicOFM\\GraphicOFM.csproj",
-      "filePath": "D:\\Программирование\\My-Own-File-Manager-MOFM-\\GraphicOFM\\GraphicOFM.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
