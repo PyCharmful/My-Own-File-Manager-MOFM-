@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "GraphicOFM/1.0.0": {
+      "GraphicOFM/0.1": {
         "runtime": {
           "GraphicOFM.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "GraphicOFM/1.0.0": {
+    "GraphicOFM/0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
