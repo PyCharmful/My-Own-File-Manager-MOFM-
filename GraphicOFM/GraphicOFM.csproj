@@ -6,7 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+<<<<<<< HEAD
     <Version>0.1</Version>
+=======
+    <Version>v.0.1-alpha_gui</Version>
+>>>>>>> 005e2b14d0b329d52ee35db10d79b7af53b7be5e
   </PropertyGroup>
 
 </Project>
