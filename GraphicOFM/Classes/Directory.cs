@@ -18,5 +18,26 @@ namespace FileManager.Classes
             filesDir = direct.GetFiles();
             dirsDir = direct.GetDirectories();
         }
+        // GUI code
+        public string[] DirectoryToStringFormat()
+        {
+            string[] listDirect = new string[dirsDir.Length];
+            for (int i = 0; i < dirsDir.Length; i++)
+            {
+                listDirect[i] = Convert.ToString(dirsDir[i].Name);
+            }
+            return listDirect;
+        }
+        public string[] FileToStringFormat()
+        {
+            string[] listFile = new string[filesDir.Length];
+            for (int i = 0; i < filesDir.Length; i++)
+            {
+                listFile[i] = Convert.ToString(filesDir[i].Name);
+            }
+            return listFile;
+        }
+
+        // end of GUI code
     }
 }

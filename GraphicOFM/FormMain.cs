@@ -1,4 +1,5 @@
 using FileManager.Classes;
+using System.Security.Cryptography.X509Certificates;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace GraphicOFM
 {
@@ -8,27 +9,63 @@ namespace GraphicOFM
         {
             InitializeComponent();
         }
-
-        private void FormMain_Load(object sender, EventArgs e)
+        // Вывод на экран директории
+        public void ShowContent(string dir = @"C:\")
         {
-            defDirect fileShow = new defDirect();
-            string[] listik = fileShow.DirectoryToStringFormat();
-            foreach (var i in listik)
+            listViewDirectory.Items.Clear();
+            listViewFile.Items.Clear();
+            DirectCreate fileShow = new DirectCreate(dir);
+            string[] listDirect = fileShow.DirectoryToStringFormat();
+            string[] listFile = fileShow.FileToStringFormat();
+            foreach (var i in listDirect)
             {
                 listViewDirectory.Items.Add(i);
             }
-        }
-    }
-    class defDirect : DirectCreate
-    {
-        public string[] DirectoryToStringFormat()
-        {
-            string[] listDirect = new string[dirsDir.Length];
-            for (int i = 0; i < dirsDir.Length; i++)
+            foreach (var i in listFile)
             {
-                listDirect[i] = Convert.ToString(dirsDir[i]);
+                listViewFile.Items.Add(i);
             }
-            return listDirect;
+        }
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            ShowContent();
+        }
+        // Смена директории
+        private void textBoxInsertDirectory_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (!Path.Exists(Convert.ToString(textBoxInsertDirectory.Text)))
+                {
+                    MessageBox.Show("Директория отсутствует");
+                }
+                else
+                {
+                    ShowContent(Convert.ToString(textBoxInsertDirectory.Text));
+                }
+            }
+        }
+
+        private void listViewDirectory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxInsertDirectory_EnabledChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxInsertDirectory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.Owner = this;
+            formAbout.ShowDialog();
         }
     }
 }

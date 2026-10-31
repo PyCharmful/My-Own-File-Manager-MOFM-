@@ -33,3 +33,4 @@ D:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\obj\Deb
 D:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\obj\Debug\net10.0-windows\GraphicOFM.genruntimeconfig.cache
 D:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\obj\Debug\net10.0-windows\ref\GraphicOFM.dll
 D:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\obj\Debug\net10.0-windows\GraphicOFM.csproj.Up2Date
+D:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\obj\Debug\net10.0-windows\GraphicOFM.FormAbout.resources
