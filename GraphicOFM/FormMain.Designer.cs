@@ -52,6 +52,7 @@
             listViewDirectory.UseCompatibleStateImageBehavior = false;
             listViewDirectory.View = View.List;
             listViewDirectory.SelectedIndexChanged += listViewDirectory_SelectedIndexChanged;
+            listViewDirectory.DoubleClick += listViewDirectory_DoubleClick;
             // 
             // listViewFile
             // 

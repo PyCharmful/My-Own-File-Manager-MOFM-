@@ -9,9 +9,12 @@ namespace FileManager.Classes
     // Данные о директории.
     class DirectCreate
     {
-        DirectoryInfo direct; // Объект для взаимодействия с директорией
-        protected FileInfo[] filesDir; // Массив из файлов
-        protected DirectoryInfo[] dirsDir; // Массив из папок
+        // Объект для взаимодействия с директорией
+        DirectoryInfo direct;
+        // Массив из файлов
+        protected FileInfo[] filesDir;
+        // Массив из папок
+        protected DirectoryInfo[] dirsDir; 
         public DirectCreate(string s = @"C:\") // Конструктор класса
         {
             direct = new DirectoryInfo(s);
@@ -37,7 +40,5 @@ namespace FileManager.Classes
             }
             return listFile;
         }
-
-        // end of GUI code
     }
 }
