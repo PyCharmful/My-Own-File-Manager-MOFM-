@@ -38,6 +38,7 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             labelFiles = new Label();
             labelFolders = new Label();
+            buttonMovePrev = new Button();
             menuStripMain.SuspendLayout();
             SuspendLayout();
             // 
@@ -134,11 +135,22 @@
             labelFolders.TabIndex = 6;
             labelFolders.Text = "Folders";
             // 
+            // buttonMovePrev
+            // 
+            buttonMovePrev.Image = Properties.Resources.ButtonMovePrev1;
+            buttonMovePrev.Location = new Point(267, 57);
+            buttonMovePrev.Name = "buttonMovePrev";
+            buttonMovePrev.Size = new Size(33, 33);
+            buttonMovePrev.TabIndex = 7;
+            buttonMovePrev.UseVisualStyleBackColor = true;
+            buttonMovePrev.Click += buttonMovePrev_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(745, 664);
+            Controls.Add(buttonMovePrev);
             Controls.Add(labelFolders);
             Controls.Add(labelFiles);
             Controls.Add(labelCurrentDirectory);
@@ -170,5 +182,6 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Label labelFiles;
         private Label labelFolders;
+        private Button buttonMovePrev;
     }
 }

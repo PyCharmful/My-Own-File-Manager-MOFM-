@@ -1,6 +1,7 @@
 using FileManager.Classes;
 using System.Security.Cryptography.X509Certificates;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Text;
 namespace GraphicOFM
 {
     public partial class FormMain : Form
@@ -12,6 +13,10 @@ namespace GraphicOFM
         // Вывод на экран директории
         public void ShowContent(string dir = @"C:\")
         {
+            if (dir[^1] != Path.DirectorySeparatorChar)
+            {
+                dir = string.Concat(dir, Path.DirectorySeparatorChar);
+            }
             listViewDirectory.Items.Clear();
             listViewFile.Items.Clear();
             DirectCreate fileShow = new DirectCreate(dir);
@@ -66,6 +71,25 @@ namespace GraphicOFM
             FormAbout formAbout = new FormAbout();
             formAbout.Owner = this;
             formAbout.ShowDialog();
+        }
+
+        private void buttonMovePrev_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string moveDirect = Convert.ToString(textBoxInsertDirectory.Text);
+                moveDirect = moveDirect.Substring(0, moveDirect.LastIndexOf(Path.DirectorySeparatorChar));
+                ShowContent(Convert.ToString(moveDirect));
+                textBoxInsertDirectory.Text = moveDirect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Вы достигли начала",
+                    $"Error: {ex.GetType().Name}",
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }
