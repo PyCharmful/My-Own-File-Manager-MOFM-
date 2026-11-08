@@ -7,7 +7,7 @@ A **file manager** that displays the files and folders of a single directory in 
 - C#
 
 ## How to use
-Currently, just move to the *bin\Debug\net10.0-windows* and run ***FileManager.exe***.<br>
+Currently, just move to the *bin\Release\net10.0-windows* and run ***FileManager.exe***.<br>
 Just type some commands to do anything.
 
 <details><summary><b>Screenshots</b></summary>
