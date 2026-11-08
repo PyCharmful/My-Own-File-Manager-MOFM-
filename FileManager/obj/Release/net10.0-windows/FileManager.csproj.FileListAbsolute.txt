@@ -1,0 +1,16 @@
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\bin\Release\net10.0-windows\FileManager.exe
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\bin\Release\net10.0-windows\FileManager.deps.json
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\bin\Release\net10.0-windows\FileManager.runtimeconfig.json
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\bin\Release\net10.0-windows\FileManager.dll
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\bin\Release\net10.0-windows\FileManager.pdb
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.AssemblyInfoInputs.cache
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.AssemblyInfo.cs
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.csproj.CoreCompileInputs.cache
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.sourcelink.json
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.dll
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\refint\FileManager.dll
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.pdb
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileManager.genruntimeconfig.cache
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\ref\FileManager.dll
+D:\Программирование\My-Own-File-Manager-MOFM-\FileManager\obj\Release\net10.0-windows\FileMana.0F99248D.Up2Date
