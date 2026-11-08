@@ -3,12 +3,25 @@
   "WorkspaceRootPath": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\My-Own-File-Manager-MOFM-\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\my-own-file-manager-mofm-\\filemanager\\classes\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0441#\\my-own-file-manager-mofm-\\filemanager\\classes\\directory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|solutionrelative:filemanager\\classes\\directory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0441#\\my-own-file-manager-mofm-\\filemanager\\classes\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|solutionrelative:filemanager\\classes\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0441#\\my-own-file-manager-mofm-\\filemanager\\classes\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> e98f76d13919af34e201c4259083af343c15009e
       "RelativeMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|solutionrelative:filemanager\\classes\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\my-own-file-manager-mofm-\\filemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|solutionrelative:filemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+<<<<<<< HEAD
     },
     {
       "AbsoluteMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\my-own-file-manager-mofm-\\filemanager\\classes\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +30,8 @@
     {
       "AbsoluteMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\my-own-file-manager-mofm-\\filemanager\\classes\\directory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9FD283C-4597-B89A-5524-1E02DEEBEF54}|FileManager\\FileManager.csproj|solutionrelative:filemanager\\classes\\directory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+>>>>>>> e98f76d13919af34e201c4259083af343c15009e
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +41,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 3,
+=======
+          "SelectedChildIndex": 0,
+>>>>>>> e98f76d13919af34e201c4259083af343c15009e
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Directory.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\My-Own-File-Manager-MOFM-\\FileManager\\Classes\\Directory.cs",
               "RelativeDocumentMoniker": "FileManager\\Classes\\Directory.cs",
@@ -38,11 +57,16 @@
               "RelativeToolTip": "FileManager\\Classes\\Directory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T14:12:28.762Z"
+              "WhenOpened": "2026-10-20T14:12:28.762Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
+=======
+              "DocumentIndex": 1,
+>>>>>>> e98f76d13919af34e201c4259083af343c15009e
               "Title": "Window.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\My-Own-File-Manager-MOFM-\\FileManager\\Classes\\Window.cs",
               "RelativeDocumentMoniker": "FileManager\\Classes\\Window.cs",
@@ -54,7 +78,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
+=======
+              "DocumentIndex": 3,
+>>>>>>> e98f76d13919af34e201c4259083af343c15009e
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\My-Own-File-Manager-MOFM-\\FileManager\\Program.cs",
               "RelativeDocumentMoniker": "FileManager\\Program.cs",
@@ -66,7 +94,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
+=======
+              "DocumentIndex": 2,
+>>>>>>> e98f76d13919af34e201c4259083af343c15009e
               "Title": "Commands.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\My-Own-File-Manager-MOFM-\\FileManager\\Classes\\Commands.cs",
               "RelativeDocumentMoniker": "FileManager\\Classes\\Commands.cs",

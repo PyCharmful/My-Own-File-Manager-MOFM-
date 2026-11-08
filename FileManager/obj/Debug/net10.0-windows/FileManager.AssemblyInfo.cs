@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e33da970dec7c8bb70660f2912601fb90b99fae")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2826fb61aa1a3f85df8bfbc51a7c6670d57d9ce4")]
+>>>>>>> e98f76d13919af34e201c4259083af343c15009e
 [assembly: System.Reflection.AssemblyProductAttribute("FileManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
