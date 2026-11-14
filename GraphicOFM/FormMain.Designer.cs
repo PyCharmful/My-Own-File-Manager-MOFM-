@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             listViewDirectory = new ListView();
             listViewFile = new ListView();
             textBoxInsertDirectory = new TextBox();
@@ -39,6 +40,7 @@
             labelFiles = new Label();
             labelFolders = new Label();
             buttonMovePrev = new Button();
+            buttonMoveNext = new Button();
             menuStripMain.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,11 +48,13 @@
             // 
             listViewDirectory.Alignment = ListViewAlignment.Left;
             listViewDirectory.Location = new Point(12, 129);
+            listViewDirectory.MultiSelect = false;
             listViewDirectory.Name = "listViewDirectory";
             listViewDirectory.Size = new Size(357, 521);
             listViewDirectory.TabIndex = 0;
             listViewDirectory.UseCompatibleStateImageBehavior = false;
             listViewDirectory.View = View.List;
+            listViewDirectory.ItemActivate += listViewDirectory_ItemActivate;
             listViewDirectory.SelectedIndexChanged += listViewDirectory_SelectedIndexChanged;
             listViewDirectory.DoubleClick += listViewDirectory_DoubleClick;
             // 
@@ -63,6 +67,8 @@
             listViewFile.TabIndex = 1;
             listViewFile.UseCompatibleStateImageBehavior = false;
             listViewFile.View = View.List;
+            listViewFile.ItemActivate += listViewFile_ItemActivate;
+            listViewFile.DoubleClick += listViewFile_DoubleClick;
             // 
             // textBoxInsertDirectory
             // 
@@ -146,11 +152,23 @@
             buttonMovePrev.UseVisualStyleBackColor = true;
             buttonMovePrev.Click += buttonMovePrev_Click;
             // 
+            // buttonMoveNext
+            // 
+            buttonMoveNext.Enabled = false;
+            buttonMoveNext.Image = (Image)resources.GetObject("buttonMoveNext.Image");
+            buttonMoveNext.Location = new Point(306, 57);
+            buttonMoveNext.Name = "buttonMoveNext";
+            buttonMoveNext.Size = new Size(34, 33);
+            buttonMoveNext.TabIndex = 8;
+            buttonMoveNext.UseVisualStyleBackColor = true;
+            buttonMoveNext.Click += buttonMoveNext_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(745, 664);
+            Controls.Add(buttonMoveNext);
             Controls.Add(buttonMovePrev);
             Controls.Add(labelFolders);
             Controls.Add(labelFiles);
@@ -184,5 +202,6 @@
         private Label labelFiles;
         private Label labelFolders;
         private Button buttonMovePrev;
+        private Button buttonMoveNext;
     }
 }

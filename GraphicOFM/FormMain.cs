@@ -1,7 +1,8 @@
 using FileManager.Classes;
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace GraphicOFM
 {
     public partial class FormMain : Form
@@ -11,6 +12,7 @@ namespace GraphicOFM
             InitializeComponent();
         }
         // Вывод на экран директории
+        static string currentDir = "";
         public void ShowContent(string dir = @"C:\")
         {
             // Если последний символ пути не равен /, то дописываем его
@@ -20,6 +22,7 @@ namespace GraphicOFM
             }
             // Меняется текст на текущую директорию
             textBoxInsertDirectory.Text = dir;
+            currentDir = dir;
             // Очистка окон
             listViewDirectory.Items.Clear();
             listViewFile.Items.Clear();
@@ -51,6 +54,7 @@ namespace GraphicOFM
                 if (!Path.Exists(Convert.ToString(textBoxInsertDirectory.Text)))
                 {
                     MessageBox.Show("Директория отсутствует");
+                    textBoxInsertDirectory.Text = currentDir;
                 }
                 else
                 {
@@ -62,7 +66,7 @@ namespace GraphicOFM
 
         private void listViewDirectory_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            buttonMoveNext.Enabled = true;
         }
 
         private void textBoxInsertDirectory_EnabledChanged(object sender, EventArgs e)
@@ -97,6 +101,7 @@ namespace GraphicOFM
                 ShowContent(Convert.ToString(dirBack));
                 // Меняется текст на текущую директорию
                 textBoxInsertDirectory.Text = dirBack;
+                currentDir = dirBack;
             }
             catch (Exception ex)
             {
@@ -109,6 +114,37 @@ namespace GraphicOFM
         // Перейти в выбранную директорию
         private void listViewDirectory_DoubleClick(object sender, EventArgs e)
         {
+            //// Извлекается текст из выбранного элемента
+            //string moveDirect = Convert.ToString(textBoxInsertDirectory.Text);
+            //// Выбираем выбранный элемент
+            //var DirSelect = listViewDirectory.SelectedItems[0];
+            //// Создаем путь к выбранной директории из текущей + выбранный элемент + \
+            //moveDirect = string.Concat(moveDirect, DirSelect.Text + Path.DirectorySeparatorChar);
+            //// Передаем в метод для показа
+            //ShowContent(Convert.ToString(moveDirect));
+            //// Меняется текст на текущую директорию
+            //textBoxInsertDirectory.Text = moveDirect;
+            //buttonMoveNext.Enabled = false;
+        }
+
+        private void buttonMoveNext_Click(object sender, EventArgs e)
+        {
+            string moveDirect = Convert.ToString(textBoxInsertDirectory.Text);
+            var DirSelect = listViewDirectory.SelectedItems[0];
+            moveDirect = string.Concat(moveDirect, DirSelect.Text + Path.DirectorySeparatorChar);
+            ShowContent(Convert.ToString(moveDirect));
+            textBoxInsertDirectory.Text = moveDirect;
+            currentDir = moveDirect;
+            buttonMoveNext.Enabled = false;
+        }
+
+        private void listViewFile_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewDirectory_ItemActivate(object sender, EventArgs e)
+        {
             // Извлекается текст из выбранного элемента
             string moveDirect = Convert.ToString(textBoxInsertDirectory.Text);
             // Выбираем выбранный элемент
@@ -119,6 +155,29 @@ namespace GraphicOFM
             ShowContent(Convert.ToString(moveDirect));
             // Меняется текст на текущую директорию
             textBoxInsertDirectory.Text = moveDirect;
+            buttonMoveNext.Enabled = false;
+        }
+        // Открытие файла
+        private void listViewFile_ItemActivate(object sender, EventArgs e)
+        {
+            var selectedItem = listViewFile.SelectedItems[0];
+            string openDirect = Path.Combine(Convert.ToString(textBoxInsertDirectory.Text), selectedItem.Text);
+            if (File.Exists(openDirect))
+            {
+                try
+                {
+                    // Открываем файл программой по умолчанию
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = openDirect,
+                        UseShellExecute = true // ОЧЕНЬ ВАЖНО для открытия файлов программой по умолчанию
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Не удалось открыть файл");
+                }
+            }
         }
     }
 }

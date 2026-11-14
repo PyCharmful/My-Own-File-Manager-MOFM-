@@ -39,7 +39,7 @@
             labelAbout.Name = "labelAbout";
             labelAbout.Size = new Size(640, 155);
             labelAbout.TabIndex = 0;
-            labelAbout.Text = "GUI-OFM (My Own FIle Manager GUI) v.0.1-alpha_gui\r\n\r\nA GUI version of console (main) version of my pet-project.\r\nIt can only shows files and folders of entered directory.\r\nUpdates will coming soon.\r\n";
+            labelAbout.Text = "GUI-OFM (My Own FIle Manager GUI) v.0.1dev\r\n\r\nA GUI version of console (main) version of my pet-project.\r\nIt can only shows files and folders of entered directory.\r\nUpdates will coming soon.\r\n";
             // 
             // FormAbout
             // 

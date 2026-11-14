@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GraphicOFM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1+99b0d90bd6e6c92f75b9939fd94d2e010509ea50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1+4311154b264ac8a4fa6e36349103344d8e2cfb71")]
 [assembly: System.Reflection.AssemblyProductAttribute("GraphicOFM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GraphicOFM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]
