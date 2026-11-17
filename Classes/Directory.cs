@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -12,9 +12,9 @@ namespace FileManager.Classes
         DirectoryInfo direct; // Объект для взаимодействия с директорией
         protected FileInfo[] filesDir; // Массив из файлов
         protected DirectoryInfo[] dirsDir; // Массив из папок
-        public DirectCreate(string s = @"C:\") // Конструктор класса
+        public DirectCreate(StringBuilder s = null) // Конструктор класса
         {
-            direct = new DirectoryInfo(s);
+            direct = new DirectoryInfo(s?.ToString() ?? @"C:\");
             filesDir = direct.GetFiles();
             dirsDir = direct.GetDirectories();
         }

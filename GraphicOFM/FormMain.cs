@@ -27,7 +27,7 @@ namespace GraphicOFM
             listViewDirectory.Items.Clear();
             listViewFile.Items.Clear();
             // Создание объекта класса DirectCreate для вызова его свойств (Список папок, файлов и т. д)
-            DirectCreate fileShow = new DirectCreate(dir);
+            DirectCreate fileShow = new DirectCreate(new StringBuilder(dir));
             string[] listDirect = fileShow.DirectoryToStringFormat();
             string[] listFile = fileShow.FileToStringFormat();
             // Заполнение окон

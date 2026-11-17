@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -22,7 +22,7 @@ namespace FileManager.Classes
         // Для передачи параметров в Print()
         private void ShowParams(bool a, bool b, bool c)
         {
-            dirCh1 = new ShowWindow(LastDirect);
+            dirCh1 = new ShowWindow(new StringBuilder(LastDirect));
             dirCh1.Print(a, b, c);
         }
         // Поменять директорию
@@ -37,7 +37,7 @@ namespace FileManager.Classes
             else
             {
                 LastDirect = changedDirectory;
-                dirCh1 = new ShowWindow(changedDirectory);
+                dirCh1 = new ShowWindow(new StringBuilder(changedDirectory));
                 ShowParams(true, false, false);
             }
         }

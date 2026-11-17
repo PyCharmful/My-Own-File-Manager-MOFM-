@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
@@ -8,7 +8,7 @@ namespace FileManager.Classes
     // Вывод информации на экран
     class ShowWindow : DirectCreate
     {
-        public ShowWindow(string s = @"C:\") : base(s) { } // Принимает путь директории от class Directory
+        public ShowWindow(StringBuilder s = null) : base(s) { } // Принимает путь директории от class Directory
 
         // Вывод директории на экран
         public void Print(bool showAllWindow = true, bool showFilesWindow = false, bool showFoldersWindow = false)
