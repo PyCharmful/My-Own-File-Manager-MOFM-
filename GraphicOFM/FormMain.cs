@@ -21,13 +21,13 @@ namespace GraphicOFM
                 dir = string.Concat(dir, Path.DirectorySeparatorChar);
             }
             // Меняется текст на текущую директорию
+            DirectCreate fileShow = new DirectCreate(new StringBuilder(dir));
             textBoxInsertDirectory.Text = dir;
-            currentDir = dir;
             // Очистка окон
             listViewDirectory.Items.Clear();
             listViewFile.Items.Clear();
             // Создание объекта класса DirectCreate для вызова его свойств (Список папок, файлов и т. д)
-            DirectCreate fileShow = new DirectCreate(new StringBuilder(dir));
+            
             string[] listDirect = fileShow.DirectoryToStringFormat();
             string[] listFile = fileShow.FileToStringFormat();
             // Заполнение окон

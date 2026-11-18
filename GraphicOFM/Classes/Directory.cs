@@ -12,33 +12,34 @@ namespace FileManager.Classes
         // Объект для взаимодействия с директорией
         DirectoryInfo direct;
         // Массив из файлов
-        protected FileInfo[] filesDir;
+        public FileInfo[] FilesDir { get; private set; }
         // Массив из папок
-        protected DirectoryInfo[] dirsDir;
-        protected StringBuilder dirPath;
+        public DirectoryInfo[] DirsDir { get; private set; }
+        public StringBuilder DirPath { get; private set; }
         public DirectCreate(StringBuilder s = null) // Конструктор класса
         {
-            dirPath = s;
-            direct = new DirectoryInfo(dirPath?.ToString() ?? @"C:\");
-            filesDir = direct.GetFiles();
-            dirsDir = direct.GetDirectories();
+            DirPath = s;
+            string pathString = DirPath?.ToString() ?? @"C:\";
+            direct = new DirectoryInfo(pathString);
+            FilesDir = direct.GetFiles();
+            DirsDir = direct.GetDirectories();
         }
         // GUI code
         public string[] DirectoryToStringFormat()
         {
-            string[] listDirect = new string[dirsDir.Length];
-            for (int i = 0; i < dirsDir.Length; i++)
+            string[] listDirect = new string[DirsDir.Length];
+            for (int i = 0; i < DirsDir.Length; i++)
             {
-                listDirect[i] = Convert.ToString(dirsDir[i].Name);
+                listDirect[i] = Convert.ToString(DirsDir[i].Name);
             }
             return listDirect;
         }
         public string[] FileToStringFormat()
         {
-            string[] listFile = new string[filesDir.Length];
-            for (int i = 0; i < filesDir.Length; i++)
+            string[] listFile = new string[FilesDir.Length];
+            for (int i = 0; i < FilesDir.Length; i++)
             {
-                listFile[i] = Convert.ToString(filesDir[i].Name);
+                listFile[i] = Convert.ToString(FilesDir[i].Name);
             }
             return listFile;
         }
