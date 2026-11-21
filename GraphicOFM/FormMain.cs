@@ -1,4 +1,4 @@
-using FileManager.Classes;
+using GraphicOFM.Classes;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -10,10 +10,13 @@ namespace GraphicOFM
         public FormMain()
         {
             InitializeComponent();
+            Task showContains = Task.Factory.StartNew(() => ShowContent());
         }
         // Вывод на экран директории
         static string currentDir = "";
-        public void ShowContent(string dir = @"C:\")
+        List<string> listDirect = new List<string>();
+        List<string> listFile = new List<string>();
+        public async void ShowContent(string dir = @"C:\")
         {
             // Если последний символ пути не равен /, то дописываем его
             if (dir[^1] != Path.DirectorySeparatorChar)
@@ -21,15 +24,17 @@ namespace GraphicOFM
                 dir = string.Concat(dir, Path.DirectorySeparatorChar);
             }
             // Меняется текст на текущую директорию
-            DirectCreate fileShow = new DirectCreate(new StringBuilder(dir));
             textBoxInsertDirectory.Text = dir;
             // Очистка окон
             listViewDirectory.Items.Clear();
             listViewFile.Items.Clear();
             // Создание объекта класса DirectCreate для вызова его свойств (Список папок, файлов и т. д)
-            
-            string[] listDirect = fileShow.DirectoryToStringFormat();
-            string[] listFile = fileShow.FileToStringFormat();
+            await Task.Run(() =>
+            {
+                DirectCreate fileShow = new DirectCreate(new StringBuilder(dir));
+                listDirect.AddRange(fileShow.DirectoryToStringFormat().ToList());
+                listFile.AddRange(fileShow.FileToStringFormat().ToList());
+            });
             // Заполнение окон
             foreach (var i in listDirect)
             {
@@ -39,6 +44,9 @@ namespace GraphicOFM
             {
                 listViewFile.Items.Add(i);
             }
+            listDirect.RemoveRange(0, listDirect.Count);
+            listFile.RemoveRange(0, listFile.Count);
+            GC.Collect();
         }
         // По умолчанию при запуске
         private void FormMain_Load(object sender, EventArgs e)
@@ -114,17 +122,7 @@ namespace GraphicOFM
         // Перейти в выбранную директорию
         private void listViewDirectory_DoubleClick(object sender, EventArgs e)
         {
-            //// Извлекается текст из выбранного элемента
-            //string moveDirect = Convert.ToString(textBoxInsertDirectory.Text);
-            //// Выбираем выбранный элемент
-            //var DirSelect = listViewDirectory.SelectedItems[0];
-            //// Создаем путь к выбранной директории из текущей + выбранный элемент + \
-            //moveDirect = string.Concat(moveDirect, DirSelect.Text + Path.DirectorySeparatorChar);
-            //// Передаем в метод для показа
-            //ShowContent(Convert.ToString(moveDirect));
-            //// Меняется текст на текущую директорию
-            //textBoxInsertDirectory.Text = moveDirect;
-            //buttonMoveNext.Enabled = false;
+            
         }
 
         private void buttonMoveNext_Click(object sender, EventArgs e)
@@ -175,8 +173,22 @@ namespace GraphicOFM
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Не удалось открыть файл");
+                    MessageBox.Show("File open failed");
                 }
+            }
+        }
+        // Кнопки перехода к директории
+        private void buttonMoveDirect_Click(object sender, System.EventArgs e)
+        {
+            if (!Path.Exists(Convert.ToString(textBoxInsertDirectory.Text)))
+            {
+                MessageBox.Show("Директория отсутствует");
+                textBoxInsertDirectory.Text = currentDir;
+            }
+            else
+            {
+                // Передаем в метод показа содержимое введенного TextBox
+                ShowContent(Convert.ToString(textBoxInsertDirectory.Text));
             }
         }
     }

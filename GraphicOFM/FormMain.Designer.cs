@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.buttonMoveDirect = new System.Windows.Forms.Button();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             listViewDirectory = new ListView();
             listViewFile = new ListView();
@@ -145,7 +146,7 @@
             // buttonMovePrev
             // 
             buttonMovePrev.Image = Properties.Resources.ButtonMovePrev1;
-            buttonMovePrev.Location = new Point(267, 57);
+            buttonMovePrev.Location = new System.Drawing.Point(324, 58);
             buttonMovePrev.Name = "buttonMovePrev";
             buttonMovePrev.Size = new Size(33, 33);
             buttonMovePrev.TabIndex = 7;
@@ -156,18 +157,30 @@
             // 
             buttonMoveNext.Enabled = false;
             buttonMoveNext.Image = (Image)resources.GetObject("buttonMoveNext.Image");
-            buttonMoveNext.Location = new Point(306, 57);
+            buttonMoveNext.Location = new System.Drawing.Point(360, 58);
             buttonMoveNext.Name = "buttonMoveNext";
             buttonMoveNext.Size = new Size(34, 33);
             buttonMoveNext.TabIndex = 8;
             buttonMoveNext.UseVisualStyleBackColor = true;
             buttonMoveNext.Click += buttonMoveNext_Click;
             // 
+            // button1
+            // 
+            this.buttonMoveDirect.Location = new System.Drawing.Point(264, 57);
+            this.buttonMoveDirect.Name = "buttonMoveDirect";
+            this.buttonMoveDirect.Size = new System.Drawing.Size(57, 34);
+            this.buttonMoveDirect.TabIndex = 9;
+            this.buttonMoveDirect.Text = "Move";
+            this.buttonMoveDirect.UseVisualStyleBackColor = true;
+            this.buttonMoveDirect.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.buttonMoveDirect.Click += new System.EventHandler(this.buttonMoveDirect_Click);
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(745, 664);
+            this.Controls.Add(this.buttonMoveDirect);
             Controls.Add(buttonMoveNext);
             Controls.Add(buttonMovePrev);
             Controls.Add(labelFolders);
@@ -203,5 +216,6 @@
         private Label labelFolders;
         private Button buttonMovePrev;
         private Button buttonMoveNext;
+        private System.Windows.Forms.Button buttonMoveDirect;
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using System.Runtime.ExceptionServices;
 
-namespace FileManager.Classes
+namespace GraphicOFM.Classes
 {
     // Данные о директории.
     class DirectCreate
