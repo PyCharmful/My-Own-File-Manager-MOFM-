@@ -1,0 +1,5 @@
+d:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\bin\Release\net8.0-windows7.0\publish\GraphicOFM.exe
+d:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\bin\Release\net8.0-windows7.0\publish\GraphicOFM.dll
+d:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\bin\Release\net8.0-windows7.0\publish\GraphicOFM.deps.json
+d:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\bin\Release\net8.0-windows7.0\publish\GraphicOFM.runtimeconfig.json
+d:\Программирование\My-Own-File-Manager-MOFM-\GraphicOFM\bin\Release\net8.0-windows7.0\publish\GraphicOFM.pdb

@@ -16,8 +16,10 @@ namespace GraphicOFM
         static string currentDir = "";
         List<string> listDirect = new List<string>();
         List<string> listFile = new List<string>();
+        DiskInfo disks = new DiskInfo();
         public async void ShowContent(string dir = @"C:\")
         {
+            var listDisk = disks.driveList;
             // Если последний символ пути не равен /, то дописываем его
             if (dir[^1] != Path.DirectorySeparatorChar)
             {
@@ -51,7 +53,14 @@ namespace GraphicOFM
         // По умолчанию при запуске
         private void FormMain_Load(object sender, EventArgs e)
         {
-            ShowContent();
+            //ShowContent();
+            comboBoxDiskSelect.Items.AddRange(disks.SetDrivers());
+            // Назначается при старте программы дефолтная директория
+            comboBoxDiskSelect.SelectedIndex = 0;
+        }
+        private void comboBoxDiskSelect_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ShowContent(comboBoxDiskSelect.SelectedItem.ToString());
         }
         // Смена директории
         private void textBoxInsertDirectory_KeyDown(object sender, KeyEventArgs e)
@@ -122,7 +131,7 @@ namespace GraphicOFM
         // Перейти в выбранную директорию
         private void listViewDirectory_DoubleClick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void buttonMoveNext_Click(object sender, EventArgs e)
@@ -191,5 +200,7 @@ namespace GraphicOFM
                 ShowContent(Convert.ToString(textBoxInsertDirectory.Text));
             }
         }
+
+        
     }
 }
