@@ -17,8 +17,11 @@ namespace GraphicOFM
         List<string> listDirect = new List<string>();
         List<string> listFile = new List<string>();
         DiskInfo disks = new DiskInfo();
+        // Используется для снятия конфликта смены директории
+        private bool isUpdating = true;
         public async void ShowContent(string dir = @"C:\")
         {
+            
             var listDisk = disks.driveList;
             // Если последний символ пути не равен /, то дописываем его
             if (dir[^1] != Path.DirectorySeparatorChar)
@@ -27,6 +30,7 @@ namespace GraphicOFM
             }
             // Меняется текст на текущую директорию
             textBoxInsertDirectory.Text = dir;
+            currentDir = textBoxInsertDirectory.Text;
             // Очистка окон
             listViewDirectory.Items.Clear();
             listViewFile.Items.Clear();
@@ -38,29 +42,30 @@ namespace GraphicOFM
                 listFile.AddRange(fileShow.FileToStringFormat().ToList());
             });
             // Заполнение окон
-            foreach (var i in listDirect)
+            foreach (var i in listDirect.ToList()) 
             {
                 listViewDirectory.Items.Add(i);
             }
-            foreach (var i in listFile)
+            foreach (var i in listFile.ToList())
             {
                 listViewFile.Items.Add(i);
             }
             listDirect.RemoveRange(0, listDirect.Count);
             listFile.RemoveRange(0, listFile.Count);
-            GC.Collect();
+            isUpdating = true;
         }
         // По умолчанию при запуске
         private void FormMain_Load(object sender, EventArgs e)
         {
-            //ShowContent();
             comboBoxDiskSelect.Items.AddRange(disks.SetDrivers());
             // Назначается при старте программы дефолтная директория
             comboBoxDiskSelect.SelectedIndex = 0;
         }
         private void comboBoxDiskSelect_SelectedValueChanged(object sender, EventArgs e)
         {
-            ShowContent(comboBoxDiskSelect.SelectedItem.ToString());
+            // Используется, чтобы не перекрывать смену директории по окну текста через comboBox
+            if (isUpdating == true)
+                ShowContent(comboBoxDiskSelect.SelectedItem.ToString());
         }
         // Смена директории
         private void textBoxInsertDirectory_KeyDown(object sender, KeyEventArgs e)
@@ -75,8 +80,26 @@ namespace GraphicOFM
                 }
                 else
                 {
+                    int foundIndex = -1;
+                    string driveRoot = Path.GetPathRoot(textBoxInsertDirectory.Text);
                     // Передаем в метод показа содержимое введенного TextBox
                     ShowContent(Convert.ToString(textBoxInsertDirectory.Text));
+                    // Смена выбранного списка в comboBox
+                    for (int i = 0; i < comboBoxDiskSelect.Items.Count; i++)
+                    {
+                        if (comboBoxDiskSelect.Items[i] is DriveInfo drive)
+                        {
+                            // Сравниваем без учета регистра
+                            if (string.Equals(drive.Name, driveRoot, StringComparison.OrdinalIgnoreCase))
+                            {
+                                foundIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                    // Блокирует смену директории по comboBox
+                    isUpdating = false;
+                    comboBoxDiskSelect.SelectedIndex = foundIndex;
                 }
             }
         }
@@ -196,8 +219,24 @@ namespace GraphicOFM
             }
             else
             {
+                int foundIndex = -1;
+                string driveRoot = Path.GetPathRoot(textBoxInsertDirectory.Text);
                 // Передаем в метод показа содержимое введенного TextBox
                 ShowContent(Convert.ToString(textBoxInsertDirectory.Text));
+                // Смена выбранного списка в comboBox
+                for (int i = 0; i < comboBoxDiskSelect.Items.Count; i++)
+                {
+                    if (comboBoxDiskSelect.Items[i] is DriveInfo drive)
+                    {
+                        // Сравниваем без учета регистра
+                        if (string.Equals(drive.Name, driveRoot, StringComparison.OrdinalIgnoreCase))
+                        {
+                            foundIndex = i;
+                            break;
+                        }
+                    }
+                }
+                comboBoxDiskSelect.SelectedIndex = foundIndex;
             }
         }
 
